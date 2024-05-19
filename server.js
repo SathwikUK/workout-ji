@@ -15,13 +15,10 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    credentials: true, // Allow credentials (e.g. cookies) to be sent with the request
-  }));
+app.use(cors());
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     console.log(req.path, req.method)
