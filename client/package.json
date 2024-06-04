@@ -1,5 +1,5 @@
 {
-  "proxy": "https://workoutapi-v3lm.onrender.com",
+  
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

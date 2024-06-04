@@ -32,11 +32,13 @@ app.use(express.static(path.join(__dirname ,'/client/build')))
 app.get('*',(req ,res) => {
     res.sendFile(path.join(__dirname ,"/client/build/index.html"))
 }) 
+const encodedPassword = encodeURIComponent('Sath@projects123');
+const dbURI = `mongodb+srv://SathwikUK:${encodedPassword}@projects.7zbjzgv.mongodb.net/projects?retryWrites=true&w=majority`;
 
-
-mongoose.connect(process.env.URI).then(()=>{
-    app.listen(process.env.PORT ,()=>{
-        console.log("connected to db and listening to port 4000")
+const PORT=5000
+mongoose.connect(dbURI).then(()=>{
+    app.listen(PORT ,()=>{
+        console.log("connected to db and listening to port 5000")
     })
 }).catch((error)=>{
     console.log(error)

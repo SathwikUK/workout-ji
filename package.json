@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "Start": "nodemon server.js",
-    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install"
+    "Start": "nodemon server.js"
+    
   },
   "keywords": [],
   "author": "",
