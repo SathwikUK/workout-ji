@@ -6,5 +6,5 @@
 # testing
 /coverage
 .vercel
-build
+/build
 package-lock.json
