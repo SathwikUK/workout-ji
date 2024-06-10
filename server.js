@@ -35,7 +35,7 @@ app.get('*',(req ,res) => {
 const encodedPassword = encodeURIComponent('Sath@projects123');
 const dbURI = `mongodb+srv://SathwikUK:${encodedPassword}@projects.7zbjzgv.mongodb.net/projects?retryWrites=true&w=majority`;
 
-const PORT=5000
+const PORT=5001
 mongoose.connect(dbURI).then(()=>{
     app.listen(PORT ,()=>{
         console.log("connected to db and listening to port 5000")
